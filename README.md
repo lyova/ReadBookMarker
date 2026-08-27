@@ -9,7 +9,8 @@ No more picking up a stack of magazines to find out none of them do anything.
 
 A small check mark appears in the top right corner of the item slot when the item is spent for
 you. It shows everywhere items are drawn: inventory, containers, the loot window, the crafting
-screen, and the trader's stock list - so you can see a magazine is useless before paying for it.
+screen, the trader's stock list - so you can see a magazine is useless before paying for it - and
+the reward picker when a quest is turned in.
 
 Two cases are covered by the same rule:
 

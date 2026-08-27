@@ -7,6 +7,9 @@ namespace ReadBookMarker
     {
         public const string cBinding = "rbmknown";
 
+        public static string Evaluate(XUiController _controller, ItemStack _stack) =>
+            Evaluate(_controller, _stack, _stack != null && !_stack.IsEmpty() ? _stack.itemValue.ItemClass : null);
+
         public static string Evaluate(XUiController _controller, ItemStack _stack, ItemClass _itemClass)
         {
             try
@@ -37,6 +40,19 @@ namespace ReadBookMarker
             if (_bindingName != Marker.cBinding) return;
 
             _value = Marker.Evaluate(__instance, __instance.ItemStack, __instance.itemClass);
+            __result = true;
+        }
+    }
+
+    /// <summary>And for the reward picker shown when a quest is turned in.</summary>
+    [HarmonyPatch(typeof(XUiC_QuestTurnInEntry), nameof(XUiC_QuestTurnInEntry.GetBindingValueInternal))]
+    public static class Patch_QuestTurnInEntry_GetBindingValue
+    {
+        static void Postfix(XUiC_QuestTurnInEntry __instance, ref bool __result, ref string value, string bindingName)
+        {
+            if (bindingName != Marker.cBinding) return;
+
+            value = Marker.Evaluate(__instance, __instance.item);
             __result = true;
         }
     }

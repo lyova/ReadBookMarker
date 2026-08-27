@@ -18,4 +18,11 @@
                 color="90,220,90,255" visible="{rbmknown}" />
     </append>
 
+    <!-- Reward picker when handing a quest in. Its item icon is centred at 34,-25, 38 wide. -->
+    <append xpath="/templates/quest_turnin_entry/rect">
+        <sprite depth="9" name="readBookMarker" width="16" height="16" sprite="ui_game_symbol_check"
+                pos="40,-7" foregroundlayer="true"
+                color="90,220,90,255" visible="{rbmknown}" />
+    </append>
+
 </configs>
