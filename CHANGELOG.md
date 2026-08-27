@@ -8,4 +8,4 @@ First release. Built and tested against 7 Days to Die V 3.2.0 (b9).
 - Check mark on skill magazines whose crafting skill is at its cap.
 - Shown in every item slot: inventory, containers, loot, crafting.
 - Shown in the trader's stock list as well, before you buy.
-- Shown in the quest reward picker.
+- Shown in the quest reward picker and on the large preview in the item info panel.

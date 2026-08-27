@@ -44,6 +44,19 @@ namespace ReadBookMarker
         }
     }
 
+    /// <summary>And for the big preview in the item info panel.</summary>
+    [HarmonyPatch(typeof(XUiC_ItemInfoWindow), nameof(XUiC_ItemInfoWindow.GetBindingValueInternal))]
+    public static class Patch_ItemInfoWindow_GetBindingValue
+    {
+        static void Postfix(XUiC_ItemInfoWindow __instance, ref bool __result, ref string value, string bindingName)
+        {
+            if (bindingName != Marker.cBinding) return;
+
+            value = Marker.Evaluate(__instance, __instance.itemStack, __instance.itemClass);
+            __result = true;
+        }
+    }
+
     /// <summary>And for the reward picker shown when a quest is turned in.</summary>
     [HarmonyPatch(typeof(XUiC_QuestTurnInEntry), nameof(XUiC_QuestTurnInEntry.GetBindingValueInternal))]
     public static class Patch_QuestTurnInEntry_GetBindingValue

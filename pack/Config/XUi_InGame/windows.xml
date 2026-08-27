@@ -1,0 +1,11 @@
+<configs>
+
+    <!-- Item info panel: the 110x110 preview is centred at 74,-58 inside the "preview" rect,
+         so its top right corner sits near x=129. Put the mark just inside that. -->
+    <append xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']">
+        <sprite depth="13" name="readBookMarker" width="28" height="28" sprite="ui_game_symbol_check"
+                pos="100,-6" foregroundlayer="true"
+                color="90,220,90,255" visible="{rbmknown}" />
+    </append>
+
+</configs>
