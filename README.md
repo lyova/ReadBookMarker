@@ -13,21 +13,24 @@ screen, the trader's stock list - so you can see a magazine is useless before pa
 the reward picker when a quest is turned in. The item info panel shows it on the large preview
 too.
 
-Two cases are covered by the same rule:
+Three cases:
 
 - **Books** - the one-shot ones that unlock a perk. Marked once read.
 - **Skill magazines** - marked when the crafting skill they feed has reached its cap.
+- **Schematics** - marked once the recipe they teach is known.
 
 ## How it decides
 
-Both kinds carry an `Unlocks` property naming a progression entry, and every progression entry has
-its own maximum: 1 for a book, 50, 75 or 100 depending on the crafting skill. The mod marks an
-item when that progression sits at its cap, so magazines stop being marked exactly when they stop
-being useful. Nothing is hardcoded - a mod adding its own books works too, as long as it follows
-the vanilla pattern.
+All three carry an `Unlocks` property, but it points at two different systems.
 
-Schematics also use `Unlocks`, but they point at recipes rather than progression, and are left
-alone.
+Books and magazines name a progression entry, and every entry has its own maximum: 1 for a book,
+50, 75 or 100 depending on the crafting skill. The mod marks the item when that progression sits
+at its cap, so magazines stop being marked exactly when they stop being useful.
+
+Schematics name a recipe instead, so the mod asks the game whether that recipe is already known.
+
+Nothing is hardcoded - books, magazines and schematics added by other mods work too, as long as
+they follow the vanilla pattern.
 
 ## Requirements
 

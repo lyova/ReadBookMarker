@@ -18,7 +18,8 @@ namespace ReadBookMarker
                     ? _controller.xui.playerUI.entityPlayer
                     : null;
 
-                var known = _stack != null && !_stack.IsEmpty() && KnownBooks.IsKnown(_itemClass, player);
+                var xui = _controller != null ? _controller.xui : null;
+                var known = _stack != null && !_stack.IsEmpty() && KnownBooks.IsKnown(_itemClass, player, xui);
                 return known ? "true" : "false";
             }
             catch (System.Exception e)
