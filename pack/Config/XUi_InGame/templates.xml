@@ -9,4 +9,13 @@
                 color="90,220,90,255" visible="{rbmknown}" />
     </append>
 
+    <!-- The trader's stock list uses its own row template, so the mark goes on separately.
+         The item icon there is centred at 34,-22 and is 38 wide, so its top right corner sits
+         around x=53: place a smaller mark just inside it. -->
+    <append xpath="/templates/trader_item/rect">
+        <sprite depth="9" name="readBookMarker" width="16" height="16" sprite="ui_game_symbol_check"
+                pos="40,-4" foregroundlayer="true"
+                color="90,220,90,255" visible="{rbmknown}" />
+    </append>
+
 </configs>
