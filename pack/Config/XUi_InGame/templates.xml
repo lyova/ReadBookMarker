@@ -1,0 +1,12 @@
+<configs>
+
+    <!-- Check mark in the top right corner of an item slot. The binding is answered by the mod,
+         see Patches.cs. Vanilla puts its own overlays (favorite, lock, item type) in the top
+         left corner, so this one does not collide with them. -->
+    <append xpath="/templates/item_stack/rect">
+        <sprite depth="9" name="readBookMarker" width="24" height="24" sprite="ui_game_symbol_check"
+                pos="${-26+cell_size},-2" foregroundlayer="true"
+                color="90,220,90,255" visible="{rbmknown}" />
+    </append>
+
+</configs>
