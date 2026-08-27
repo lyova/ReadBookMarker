@@ -1,0 +1,67 @@
+[size=5][b]Read Book Marker[/b][/size]
+
+[size=4][b]Description[/b][/size]
+
+You loot a shelf, grab six magazines, haul them home - and none of them do anything, because those skills are already capped. Read Book Marker answers that from the icon itself.
+
+A green check mark appears on any reading material that is spent for you: a book you have read, a magazine whose skill is at its cap, a schematic whose recipe you already know. It shows up everywhere the game draws an item, including the trader's shelf, so you can see it before paying.
+
+It is a small quality of life mod: no new items, no balance changes. It only reads what the game already knows about your character.
+
+[size=4][b]Main features[/b][/size]
+
+[list]
+[*][b]Books.[/b] The one-shot ones that unlock a perk - marked once read.
+[*][b]Skill magazines.[/b] Marked when the crafting skill they feed has reached its cap, whether that cap is 50, 75 or 100.
+[*][b]Schematics.[/b] Marked once the recipe they teach is known, including recipes you unlocked through perks.
+[*][b]Shown before you pay.[/b] The trader's stock list and the quest reward picker both carry the mark.
+[*][b]Nothing hardcoded.[/b] Books, magazines and schematics from other mods work too, as long as they follow the vanilla pattern.
+[/list]
+
+[size=4][b]Where the mark shows[/b][/size]
+
+[list]
+[*]Inventory, backpack, containers and loot windows
+[*]Crafting screen and its ingredient slots
+[*]Trader's stock list
+[*]Quest reward picker
+[*]Item info panel, on the large preview
+[/list]
+
+[size=4][b]How it decides[/b][/size]
+
+Books and magazines point at a progression entry, and every entry has its own maximum - 1 for a book, 50, 75 or 100 depending on the crafting skill. The mark appears when that progression sits at its cap, so a magazine stops being marked exactly when it stops being useful. Schematics point at a recipe instead, so the mod asks the game whether that recipe is already known.
+
+[size=4][b]Requirements[/b][/size]
+
+[list]
+[*]7 Days to Die [b]V 3.2.0[/b]. Built and tested against b9.
+[*]The game must run [b]without EasyAntiCheat[/b]. The mod ships a DLL and EAC blocks those - launch 7DaysToDie.exe directly, or pick the non-EAC option in the Steam launcher.
+[*]No other mods needed. Harmony comes from the game's own 0_TFP_Harmony.
+[/list]
+
+[size=4][b]Installation instructions[/b][/size]
+
+[list=1]
+[*]Download the archive.
+[*]Extract it into your Mods folder so that you end up with [b]Mods\ReadBookMarker\ModInfo.xml[/b]. If your game has no Mods folder yet, create one next to 7DaysToDie.exe.
+[*]Start the game without EasyAntiCheat.
+[/list]
+
+Vortex and the 7D2D Mod Launcher handle the archive as a normal modlet. To uninstall, delete the folder - the mod writes nothing to your save.
+
+[size=4][b]Multiplayer[/b][/size]
+
+Client side only: the server does not need it and neither do the other players. Everything it reads is already on your client.
+
+[b]Only tested in single player so far.[/b] It should behave the same as a client on a dedicated server, but nobody has verified that yet - feedback welcome.
+
+[size=4][b]Compatibility[/b][/size]
+
+Adds sprites to item templates through XPath and answers a custom binding with Harmony postfixes, so no vanilla file is overwritten. UI overhauls that only restyle the templates are fine; one that replaces an item template outright would drop the mark in that particular window while the rest keep working.
+
+[size=4][b]Source and permissions[/b][/size]
+
+Source code is on GitHub: [url=https://github.com/lyova/ReadBookMarker]github.com/lyova/ReadBookMarker[/url]
+
+MIT licensed. Fork it, modify it, bundle it into mod packs - credit is appreciated but not required.
