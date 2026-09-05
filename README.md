@@ -1,5 +1,7 @@
 # Read Book Marker
 
+**[Download on Nexus Mods](https://www.nexusmods.com/7daystodie/mods/12279)**
+
 A client-side modlet for **7 Days to Die V 3.2.0** that puts a green check mark on reading material
 you no longer need: books you have read, magazines whose skill is capped, schematics you already
 know.
