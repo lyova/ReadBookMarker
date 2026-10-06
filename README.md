@@ -2,7 +2,7 @@
 
 **[Download on Nexus Mods](https://www.nexusmods.com/7daystodie/mods/12279)**
 
-A client-side modlet for **7 Days to Die V 3.2.0** that puts a green check mark on reading material
+A client-side modlet for **7 Days to Die V 3.3** that puts a green check mark on reading material
 you no longer need: books you have read, magazines whose skill is capped, schematics you already
 know.
 
@@ -47,7 +47,7 @@ they follow the vanilla pattern.
 
 ## Requirements
 
-- 7 Days to Die **V 3.2.0**
+- 7 Days to Die **V 3.3**. Built and tested against b18.
 - Launch **without EasyAntiCheat** - the mod ships a DLL, and EAC blocks those. Start the game
   from `7DaysToDie.exe`, or pick the non-EAC option in the Steam launcher.
 - No other mods needed.

@@ -4,7 +4,7 @@
     <DisplayName value="Read Book Marker" />
     <Description value="Marks books you have already read, skill magazines whose skill is maxed out and schematics you already know, so you can tell at a glance which ones are still worth picking up." />
     <Author value="Lyova" />
-    <Version value="1.0.0" />
+    <Version value="1.0.1" />
     <Website value="" />
     <SkipWithAntiCheat value="true" />
 </xml>
